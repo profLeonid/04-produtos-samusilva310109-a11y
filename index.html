@@ -8,13 +8,37 @@
   </head>
     <title>Document</title>
 </head>
-<body class="bg-gray-300 flex flex-col h-screen items-center justify-center gap-4">
-    <h1 class="text-2xl">Lista Produtos</h1>
-    <input 
-        type="text" 
-        class="border px-4 py-2 rounded"
-        id="inp-produto"
-    >
+<body class="flex flex-col items-center justify-center">
+    <main class="bg-gray-300 flex flex-col  items-center justify-center gap-4">
+        <h1 class="text-2xl">Lista Produtos</h1>
+    <form class="grid grid-cols-2 grid-rows-3 gap-1">
+        <label >
+            Código
+        </label>
+        <input 
+            type="text"
+            class="border px-4 py-2 rounded"
+            id="inp-codigo"
+        >
+        <label>
+            Produto
+        </label>
+        <input 
+            type="text" 
+            class="border px-4 py-2 rounded"
+            id="inp-produto"
+        >
+        <label>
+            Quantidade
+        </label>
+        <input 
+            type="text"
+            class="border px-4 py-2 rounded"  
+            id="inp-quantidade"  
+        >
+
+    </form>
+
     <button 
         class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-white hover:text-blue-500 transition duration-300 ease-in-out"
         onclick="adicionarProduto()"   
@@ -23,9 +47,15 @@
     </button>
     <div
         id="list"
-        class="flex flex-col gap-2"
+        class="grid grid-cols-3 gap-4"
     >
-    
+        <div class="flex space-x-20">
+            <h2>Código</h2>
+            <h2>Produto</h2>
+            <h2>Quantidade</h2>
+        </div>
     </div>
+    </main>
+    
 </body>
 </html>
