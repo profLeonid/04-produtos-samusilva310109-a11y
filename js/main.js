@@ -5,8 +5,14 @@ function adicionarProduto(){
     const lista = document.getElementById('list')
 
     const span = document.createElement('span')
-    span.textContent = produto.value
-    span.className = "bg-blue-100 p-2" 
+    if(produto.value != ''){
+        span.textContent = produto.value
+        span.className = "bg-blue-100 p-2"
+        produto.value = "" 
     
-    lista.appendChild(span)
+        lista.appendChild(span)
+    }else{
+        window.alert('Preencha todos os campos!!')
+    }
+    
 }
